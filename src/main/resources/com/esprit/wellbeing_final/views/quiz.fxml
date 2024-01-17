@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="396.0" prefWidth="483.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.wellbeing_final.controllers.QuizController">
+    <children>
+        <ToggleButton fx:id="startBtn" layoutX="196.0" layoutY="47.0" mnemonicParsing="false" onAction="#start" text="Start quizz" />
+        <Label fx:id="textGen" layoutX="93.0" layoutY="14.0" text="Welcome to the weekly quiz would you like to start ?" />
+      <Pane fx:id="qstPane" layoutX="14.0" layoutY="84.0" prefHeight="303.0" prefWidth="454.0" visible="fase">
+         <children>
+              <Label fx:id="questionLabel" layoutX="7.0" layoutY="6.0" prefHeight="17.0" prefWidth="429.0" text="Label" />
+            <Button layoutX="384.0" layoutY="264.0" mnemonicParsing="false" onAction="#next" text="Next" />
+             <ScrollPane fitToHeight="true" fitToWidth="true" layoutY="37.0" prefHeight="224.0" prefWidth="454.0">
+               <content>
+                  <VBox fx:id="answersRendrer" prefHeight="239.0" prefWidth="396.0" />
+               </content>
+            </ScrollPane>
+         </children>
+      </Pane>
+      <Label fx:id="score" layoutX="336.0" layoutY="51.0" textFill="#e42828" />
+    </children>
+</Pane>
