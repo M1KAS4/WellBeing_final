@@ -58,9 +58,17 @@ public class LoginController {
     }
 
     public void loginButtonOnAction(ActionEvent e) {
-
         String email = emailTextField.getText();
         String password = pwPasswordField.getText();
+
+        // Check if email is not a valid email format
+        if (!isValidEmail(email)) {
+            MessageLabel.setText("Please enter a valid email address !");
+            MessageLabel.setVisible(true);
+            return; // Exit the method if email is not valid
+        }
+
+        // Check if both email and password are blank
         if (email.isBlank() && password.isBlank()) {
             MessageLabel.setText("Please enter both email and password !");
             MessageLabel.setVisible(true);
@@ -75,12 +83,20 @@ public class LoginController {
             if (u != null) {
                 redirectToInterface(u.getRole(), u);
             } else {
-                MessageLabel.setText("Login failed. Please try again.");
+                MessageLabel.setText("Email and password do not match. Please try again.");
                 MessageLabel.setVisible(true);
             }
         }
-
     }
+
+    // Method to validate email format
+    private boolean isValidEmail(String email) {
+        // You can implement your own email validation logic here
+        // For simplicity, we're using a basic regex pattern
+        String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
+        return email.matches(emailRegex);
+    }
+
 
     private void redirectToInterface(Role role, User user) {
         try {
