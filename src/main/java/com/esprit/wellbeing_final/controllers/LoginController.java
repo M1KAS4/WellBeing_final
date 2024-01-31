@@ -1,5 +1,6 @@
 package com.esprit.wellbeing_final.controllers;
 
+import com.esprit.wellbeing_final.entities.Role;
 import com.esprit.wellbeing_final.entities.User;
 import com.esprit.wellbeing_final.services.UserService;
 import com.esprit.wellbeing_final.services.UserServiceImp;
@@ -11,7 +12,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleButton;
 import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class LoginController {
 
@@ -24,8 +28,34 @@ public class LoginController {
     private PasswordField pwPasswordField;
     @FXML
     private Label MessageLabel;
-
+    @FXML
+    private ToggleButton togglePasswordButton;
+    @FXML
+    private TextField pwTextField;
     private UserService svr = new UserServiceImp();
+
+    public void initialize() {
+        togglePasswordButton.setOnAction(event -> {
+            if (togglePasswordButton.isSelected()) {
+                // Show the password
+                pwPasswordField.setManaged(false);
+                pwPasswordField.setVisible(false);
+
+                pwTextField.setText(pwPasswordField.getText());
+                pwTextField.setVisible(true);
+                pwTextField.setManaged(true);
+
+            } else {
+                pwTextField.setVisible(false);
+                pwTextField.setManaged(false);
+                pwPasswordField.setManaged(true);
+                pwPasswordField.setText(pwTextField.getText());
+                pwPasswordField.setVisible(true);
+
+            }
+        });
+
+    }
 
     public void loginButtonOnAction(ActionEvent e) {
 
@@ -43,7 +73,7 @@ public class LoginController {
         } else {
             User u = svr.login(email, password);
             if (u != null) {
-                redirectToEmployee();
+                redirectToInterface(u.getRole(), u);
             } else {
                 MessageLabel.setText("Login failed. Please try again.");
                 MessageLabel.setVisible(true);
@@ -52,16 +82,52 @@ public class LoginController {
 
     }
 
-    private void redirectToEmployee() {
+    private void redirectToInterface(Role role, User user) {
         try {
-            FXMLLoader loader = new FXMLLoader(LoginController.class.getResource("/com/esprit/wellbeing_final/views/employeeUi.fxml"));
-            Parent root = loader.load();
-            Scene adminScene = new Scene(root);
-            Stage stage = (Stage) loginMessageLabel.getScene().getWindow();
-            stage.setScene(adminScene);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+            String resourcePath = "/com/esprit/wellbeing_final/views/";
+            String fxmlFile = ""; // Initialize fxmlFile variable
 
+            // Set fxmlFile based on role
+            switch (role) {
+                case EMPLOYEE:
+                    fxmlFile = "employeeUi.fxml";
+                    break;
+                case COACH:
+                    fxmlFile = "coachUi.fxml";
+                    break;
+                case ADMIN:
+                    fxmlFile = "adminUi.fxml";
+                    break;
+                default:
+                    break;
+            }
+
+            // Check if fxmlFile is not empty before proceeding
+            if (!fxmlFile.isEmpty()) {
+                FXMLLoader loader = new FXMLLoader(LoginController.class.getResource(resourcePath + fxmlFile));
+                Parent root = loader.load();
+                Scene scene = new Scene(root);
+                Stage stage = (Stage) loginMessageLabel.getScene().getWindow();
+                stage.setScene(scene);
+
+                // Set user data to the controller if necessary
+                Object controller = loader.getController();
+                if (controller instanceof EmployeeController) {
+                    ((EmployeeController) controller).setUserData(user);
+                } else if (controller instanceof AdminController) {
+                    ((AdminController) controller).setUserData(user);
+                } else if (controller instanceof CoachController) {
+                    ((CoachController) controller).setUserData(user);
+                }
+
+                // Show the stage
+                stage.show();
+            } else {
+                System.out.println("Invalid role specified.");
+            }
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
     }
+
 }
