@@ -11,6 +11,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 
@@ -29,11 +30,15 @@ public class QuizController {
     @FXML
     Label textGen;
     @FXML
+    Label textGen1;
+    @FXML
     Label score;
     @FXML
     Label questionLabel;
     @FXML
     VBox answersRendrer;
+    @FXML
+    ImageView imgbg;
     private ToggleGroup toggleGroup = new ToggleGroup();
     List<String> answers = new ArrayList<>();
 
@@ -62,6 +67,8 @@ public class QuizController {
         test.put("Technology", 8);
         startBtn.setVisible(false);
         textGen.setVisible(false);
+        textGen1.setVisible(false);
+        imgbg.setVisible(false);
         qstPane.setVisible(true);
 
         nbrQst = 0;

@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -21,34 +22,39 @@ public class LoginController {
     private TextField emailTextField;
     @FXML
     private PasswordField pwPasswordField;
+    @FXML
+    private Label MessageLabel;
+
     private UserService svr = new UserServiceImp();
 
     public void loginButtonOnAction(ActionEvent e) {
 
         String email = emailTextField.getText();
         String password = pwPasswordField.getText();
-        User u = svr.login(email, password);
-        if (u != null) {
-            redirectToEmployee();
+        if (email.isBlank() && password.isBlank()) {
+            MessageLabel.setText("Please enter both email and password !");
+            MessageLabel.setVisible(true);
+        } else if (email.isBlank()) {
+            MessageLabel.setText("Please enter your email !");
+            MessageLabel.setVisible(true);
+        } else if (password.isBlank()) {
+            MessageLabel.setText("Please enter your password !");
+            MessageLabel.setVisible(true);
         } else {
-            System.out.println("Failed");
+            User u = svr.login(email, password);
+            if (u != null) {
+                redirectToEmployee();
+            } else {
+                MessageLabel.setText("Login failed. Please try again.");
+                MessageLabel.setVisible(true);
+            }
         }
 
-
-        //if (emailTextField.getText().isBlank() == false && pwPasswordField.getText().isBlank() == false){
-        //loginMessageLabel.setText("Loging in!");
-        // } else if (emailTextField.getText().isBlank() == true && pwPasswordField.getText().isBlank() == false) {
-        //   loginMessageLabel.setText("Please enter your email!");
-        //} else if (emailTextField.getText().isBlank() == false && pwPasswordField.getText().isBlank() == true) {
-        //  loginMessageLabel.setText("Please enter your password!");
-        //} else {
-        // loginMessageLabel.setText("Please enter both email and password!");
-        //}
     }
 
     private void redirectToEmployee() {
         try {
-            FXMLLoader loader = new FXMLLoader(LoginController.class.getResource("/com/esprit/wellbeing_final/views/employee.fxml"));
+            FXMLLoader loader = new FXMLLoader(LoginController.class.getResource("/com/esprit/wellbeing_final/views/employeeUi.fxml"));
             Parent root = loader.load();
             Scene adminScene = new Scene(root);
             Stage stage = (Stage) loginMessageLabel.getScene().getWindow();

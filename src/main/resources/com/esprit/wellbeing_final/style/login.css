@@ -1,0 +1,28 @@
+.vbox_background_center {
+    -fx-background-image:url("../images/bgcenter.jpg")
+}
+
+.vbox_background_right {
+    -fx-background-image: url("../images/bgright.jpg");
+}
+
+.pane_left {
+    -fx-border-radius: 0 20 0 0;
+    -fx-background-radius: 0 20 20 0;
+}
+
+.sidebar_button {
+    -fx-background-color: transparent;
+}
+.sidebar_button:hover {
+    -fx-background-color: #0d594d;
+    -fx-border-width: 0px 0px 2px 0px;
+    -fx-border-color: white;
+}
+.sidebar_button:pressed {
+    -fx-background-color: #0a433a !important;
+}
+
+
+
+

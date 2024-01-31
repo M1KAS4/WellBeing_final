@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0"
+            prefWidth="780.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.esprit.wellbeing_final.controllers.LoginController">
+    <center>
+        <VBox alignment="TOP_RIGHT" prefWidth="449.0" styleClass="vbox_background_center"
+              stylesheets="@../style/login.css" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets/>
+            </BorderPane.margin>
+            <children>
+                <HBox alignment="CENTER_LEFT" prefHeight="72.0" prefWidth="446.0">
+                    <children>
+                        <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="39.0"
+                                style="-fx-background-radius: 50; -fx-border-radius: 50; -fx-background-color: black;"
+                                text="Cc." textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="12.0"/>
+                            </font>
+                            <HBox.margin>
+                                <Insets left="15.0"/>
+                            </HBox.margin>
+                        </Button>
+                        <Button alignment="CENTER" mnemonicParsing="false" prefHeight="38.0" prefWidth="191.0"
+                                style="-fx-background-radius: 50; -fx-background-color: #ed6637;"
+                                text="Login To you account" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="16.0"/>
+                            </font>
+                            <HBox.margin>
+                                <Insets left="190.0"/>
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                </HBox>
+                <HBox alignment="BOTTOM_CENTER" prefHeight="144.0" prefWidth="446.0">
+                    <children>
+                        <Label alignment="BOTTOM_CENTER" text="Space">
+                            <font>
+                                <Font name="Impact" size="48.0"/>
+                            </font>
+                        </Label>
+                        <Label text="For" textFill="#d4baba">
+                            <font>
+                                <Font name="Impact" size="48.0"/>
+                            </font>
+                            <HBox.margin>
+                                <Insets left="15.0"/>
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                    <VBox.margin>
+                        <Insets/>
+                    </VBox.margin>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="55.0" prefWidth="446.0">
+                    <children>
+                        <Label text="Your" textFill="#d4baba">
+                            <font>
+                                <Font name="Impact" size="48.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="TOP_CENTER" text="Employees">
+                            <font>
+                                <Font name="Impact" size="48.0"/>
+                            </font>
+                            <HBox.margin>
+                                <Insets left="15.0"/>
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                </HBox>
+            </children>
+            <opaqueInsets>
+                <Insets/>
+            </opaqueInsets>
+        </VBox>
+    </center>
+    <right>
+        <VBox prefHeight="460.0" prefWidth="334.0" styleClass="vbox_background_right" stylesheets="@../style/login.css"
+              BorderPane.alignment="CENTER">
+            <children>
+                <VBox alignment="BOTTOM_CENTER" prefHeight="153.0" prefWidth="334.0">
+                    <children>
+                        <Text fill="#d39d59" strokeType="OUTSIDE" strokeWidth="0.0" text="CALM"
+                              wrappingWidth="141.04296934604645">
+                            <font>
+                                <Font name="System Bold" size="36.0"/>
+                            </font>
+                        </Text>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Oasis" textAlignment="RIGHT"
+                              wrappingWidth="78.64288973808289">
+                            <font>
+                                <Font name="System Bold Italic" size="27.0"/>
+                            </font>
+                        </Text>
+                    </children>
+                </VBox>
+                <Label alignment="TOP_RIGHT" prefHeight="20.0" prefWidth="84.0" text="Email" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="14.0"/>
+                    </font>
+                    <VBox.margin>
+                        <Insets/>
+                    </VBox.margin>
+                </Label>
+                <HBox alignment="TOP_CENTER" prefHeight="52.0" prefWidth="334.0">
+                    <children>
+                        <TextField fx:id="emailTextField" prefHeight="35.0" prefWidth="260.0" promptText="Email"
+                                   style="-fx-background-radius: 50; -fx-border-radius: 50;">
+                            <HBox.margin>
+                                <Insets top="5.0"/>
+                            </HBox.margin>
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                        </TextField>
+                    </children>
+                    <VBox.margin>
+                        <Insets/>
+                    </VBox.margin>
+                </HBox>
+                <Label alignment="TOP_RIGHT" prefHeight="20.0" prefWidth="112.0" text="Password" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="14.0"/>
+                    </font>
+                </Label>
+                <HBox alignment="TOP_CENTER" prefHeight="52.0" prefWidth="334.0">
+                    <children>
+                        <PasswordField fx:id="pwPasswordField" prefHeight="35.0" prefWidth="260.0" promptText="Password"
+                                       style="-fx-background-radius: 50; -fx-border-radius: 50;">
+                            <HBox.margin>
+                                <Insets/>
+                            </HBox.margin>
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                        </PasswordField>
+                    </children>
+                    <VBox.margin>
+                        <Insets top="5.0"/>
+                    </VBox.margin>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="52.0" prefWidth="334.0">
+                    <children>
+                        <Button fx:id="loginbutton" mnemonicParsing="false" onAction="#loginButtonOnAction"
+                                prefHeight="26.0" prefWidth="106.0"
+                                style="-fx-background-radius: 50; -fx-border-radius: 50; -fx-background-color: #ed6637;"
+                                text="Login" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="15.0"/>
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                        </Button>
+                        <Label fx:id="loginMessageLabel" alignment="CENTER" ellipsisString="" layoutX="95.0"
+                               layoutY="132.0" prefHeight="18.0" prefWidth="0.0" textAlignment="CENTER"
+                               textFill="#144272" wrapText="true"/>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="334.0">
+                    <children>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                            <children>
+                                <HBox alignment="TOP_CENTER" prefHeight="93.0" prefWidth="318.0">
+                                    <children>
+                                        <Label fx:id="MessageLabel" visible="false" text="Label" textFill="WHITE">
+                                            <HBox.margin>
+                                                <Insets top="10.0"/>
+                                            </HBox.margin>
+                                            <font>
+                                                <Font name="System Bold" size="13.0"/>
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <Text fill="#fafafa" strokeType="OUTSIDE" strokeWidth="0.0"
+                                      text="Copyright ©. All Rights Reserved" textAlignment="CENTER"
+                                      wrappingWidth="317.490234375"/>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </right>
+</BorderPane>
