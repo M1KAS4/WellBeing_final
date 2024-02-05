@@ -13,11 +13,11 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0"
       prefWidth="580.0" style="-fx-background-color: #F8F2E6;" xmlns="http://javafx.com/javafx/21"
-      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.wellbeing_final.controllers.QuizController">
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.wellbeing_final.controllers.employee.QuizController">
     <children>
         <ImageView fx:id="imgbg" fitHeight="460.0" fitWidth="580.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../images/quiz.png"/>
+                <Image url="@../../images/quiz.png"/>
             </image>
         </ImageView>
         <Label fx:id="textGen" alignment="CENTER" layoutX="297.0" layoutY="109.0" prefHeight="121.0" prefWidth="281.0"

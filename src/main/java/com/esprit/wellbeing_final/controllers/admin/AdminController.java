@@ -1,4 +1,4 @@
-package com.esprit.wellbeing_final.controllers;
+package com.esprit.wellbeing_final.controllers.admin;
 
 import com.esprit.wellbeing_final.entities.User;
 import javafx.fxml.FXML;

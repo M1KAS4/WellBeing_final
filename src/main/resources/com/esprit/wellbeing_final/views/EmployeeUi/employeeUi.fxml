@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="780.0" style="-fx-background-color: #F8F2E6;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.wellbeing_final.controllers.employee.EmployeeController">
+    <left>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #043730;" styleClass="pane_left" stylesheets="@../../style/style.css" BorderPane.alignment="CENTER">
+            <children>
+                <VBox alignment="TOP_CENTER" layoutX="6.4" prefHeight="460.0" prefWidth="184.0" style="-fx-background-color: #043730;" styleClass="pane_left" stylesheets="@../../style/style.css" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                    <children>
+                        <AnchorPane prefHeight="79.0" prefWidth="200.0" style="-fx-border-width: 0px 0px 1px 0px; -fx-border-color: white;">
+                            <children>
+                                <Label fx:id="nomLabel" text="Nom Prenom" textAlignment="CENTER" textFill="#ed6637" wrapText="true" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="roleLabel" layoutX="10.4" layoutY="37.8" text="Role" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="10.4" AnchorPane.rightAnchor="10.400000000000006" AnchorPane.topAnchor="37.8">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                        <Button fx:id="profilebut" mnemonicParsing="false" onAction="#renderProfile" prefHeight="51.0" prefWidth="200.0" styleClass="sidebar_button" stylesheets="@../../style/style.css" text="Profile" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="5.0" top="10.0" />
+                            </VBox.margin>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Button>
+                        <Button fx:id="quizbut" mnemonicParsing="false" onAction="#renderQuiz" prefHeight="51.0" prefWidth="200.0" styleClass="sidebar_button" stylesheets="@../../style/style.css" text="Stress Quiz" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                        </Button>
+                        <Button fx:id="exsbutton" mnemonicParsing="false" onAction="#renderExerice" prefHeight="51.0" prefWidth="200.0" styleClass="sidebar_button" stylesheets="@../../style/style.css" text="Exercices" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                        </Button>
+                        <Button fx:id="edcbutton" mnemonicParsing="false" onAction="#renderEducatif" prefHeight="51.0" prefWidth="205.0" styleClass="sidebar_button" stylesheets="@../../style/style.css" text="Educatif Ressources" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                        </Button>
+                        <Button fx:id="exspbutton" mnemonicParsing="false" onAction="#renderExchange" prefHeight="51.0" prefWidth="200.0" styleClass="sidebar_button" stylesheets="@../../style/style.css" text="Exchanging Space" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                        </Button>
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </left>
+    <center>
+        <Pane fx:id="rendrer" prefHeight="460.0" prefWidth="580.0" BorderPane.alignment="CENTER" />
+    </center>
+</BorderPane>

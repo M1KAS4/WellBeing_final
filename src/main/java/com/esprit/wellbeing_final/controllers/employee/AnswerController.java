@@ -1,4 +1,4 @@
-package com.esprit.wellbeing_final.controllers;
+package com.esprit.wellbeing_final.controllers.employee;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

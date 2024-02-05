@@ -13,7 +13,15 @@ module com.esprit.wellbeing_final {
 
     opens com.esprit.wellbeing_final to javafx.fxml;
     exports com.esprit.wellbeing_final;
-    exports com.esprit.wellbeing_final.controllers;
-    opens com.esprit.wellbeing_final.controllers to javafx.fxml;
+
+    
+    exports com.esprit.wellbeing_final.controllers.admin;
+    opens com.esprit.wellbeing_final.controllers.admin to javafx.fxml;
+    exports com.esprit.wellbeing_final.controllers.employee;
+    opens com.esprit.wellbeing_final.controllers.employee to javafx.fxml;
+    exports com.esprit.wellbeing_final.controllers.auth;
+    opens com.esprit.wellbeing_final.controllers.auth to javafx.fxml;
+    exports com.esprit.wellbeing_final.controllers.coach;
+    opens com.esprit.wellbeing_final.controllers.coach to javafx.fxml;
 
 }

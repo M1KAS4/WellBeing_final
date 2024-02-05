@@ -1,5 +1,8 @@
-package com.esprit.wellbeing_final.controllers;
+package com.esprit.wellbeing_final.controllers.auth;
 
+import com.esprit.wellbeing_final.controllers.admin.AdminController;
+import com.esprit.wellbeing_final.controllers.coach.CoachController;
+import com.esprit.wellbeing_final.controllers.employee.EmployeeController;
 import com.esprit.wellbeing_final.entities.Role;
 import com.esprit.wellbeing_final.entities.User;
 import com.esprit.wellbeing_final.services.UserService;
@@ -106,13 +109,13 @@ public class LoginController {
             // Set fxmlFile based on role
             switch (role) {
                 case EMPLOYEE:
-                    fxmlFile = "employeeUi.fxml";
+                    fxmlFile = "EmployeeUi/employeeUi.fxml";
                     break;
                 case COACH:
-                    fxmlFile = "coachUi.fxml";
+                    fxmlFile = "CoachUi/coachUi.fxml";
                     break;
                 case ADMIN:
-                    fxmlFile = "adminUi.fxml";
+                    fxmlFile = "AdminUi/adminUi.fxml";
                     break;
                 default:
                     break;

@@ -6,11 +6,11 @@ import com.esprit.wellbeing_final.tools.MyConnection;
 
 import java.sql.*;
 
-public class UserServiceImp implements UserService  {
+public class UserServiceImp implements UserService {
     @Override
     public User login(String email, String password) {
         String SelectQuery = "SELECT * FROM users WHERE email = ? and password= ?";
-        try(PreparedStatement preparedStatement = MyConnection.getInstance().getCnx().prepareStatement(SelectQuery, Statement.RETURN_GENERATED_KEYS)){
+        try (PreparedStatement preparedStatement = MyConnection.getInstance().getCnx().prepareStatement(SelectQuery, Statement.RETURN_GENERATED_KEYS)) {
             preparedStatement.setString(1, email);
             preparedStatement.setString(2, password);
             ResultSet str = preparedStatement.executeQuery();

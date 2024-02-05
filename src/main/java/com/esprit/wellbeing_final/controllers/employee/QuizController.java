@@ -1,5 +1,6 @@
-package com.esprit.wellbeing_final.controllers;
+package com.esprit.wellbeing_final.controllers.employee;
 
+import com.esprit.wellbeing_final.controllers.auth.LoginController;
 import com.esprit.wellbeing_final.entities.Question;
 import com.esprit.wellbeing_final.entities.QuestionsAnswer;
 import com.esprit.wellbeing_final.services.QuestionAnswerService;
@@ -103,7 +104,7 @@ public class QuizController {
         for (int i = 0; i < nodes.length; i++) {
             try {
                 final int j = i;
-                FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(LoginController.class.getResource("/com/esprit/wellbeing_final/views/answer.fxml")));
+                FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(LoginController.class.getResource("/com/esprit/wellbeing_final/views/EmployeeUi/answer.fxml")));
                 nodes[i] = loader.load();
                 AnswerController controller = loader.getController();
                 controller.initialize(toggleGroup);

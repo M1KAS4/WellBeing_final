@@ -16,9 +16,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.wellbeing_final.controllers.LoginController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.wellbeing_final.controllers.auth.LoginController">
     <center>
-        <VBox alignment="TOP_RIGHT" prefWidth="449.0" styleClass="vbox_background_center" stylesheets="@../style/login.css" BorderPane.alignment="CENTER">
+        <VBox alignment="TOP_RIGHT" prefWidth="449.0" styleClass="vbox_background_center" stylesheets="@../style/style.css" BorderPane.alignment="CENTER">
             <BorderPane.margin>
                 <Insets />
             </BorderPane.margin>
@@ -87,7 +87,7 @@
         </VBox>
     </center>
     <right>
-        <VBox prefHeight="460.0" prefWidth="334.0" styleClass="vbox_background_right" stylesheets="@../style/login.css" BorderPane.alignment="CENTER">
+        <VBox prefHeight="460.0" prefWidth="334.0" styleClass="vbox_background_right" stylesheets="@../style/style.css" BorderPane.alignment="CENTER">
             <children>
                 <VBox alignment="BOTTOM_CENTER" prefHeight="153.0" prefWidth="334.0">
                     <children>

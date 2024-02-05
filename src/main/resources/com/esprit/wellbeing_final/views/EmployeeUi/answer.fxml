@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.HBox?>
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0"
       prefWidth="420.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="com.esprit.wellbeing_final.controllers.AnswerController">
+      fx:controller="com.esprit.wellbeing_final.controllers.employee.AnswerController">
     <children>
         <RadioButton fx:id="answerRadioButton" mnemonicParsing="false" prefHeight="46.0" prefWidth="15.0">
             <HBox.margin>

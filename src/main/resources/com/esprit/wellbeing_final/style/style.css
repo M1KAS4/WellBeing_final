@@ -13,15 +13,21 @@
 
 .sidebar_button {
     -fx-background-color: transparent;
+    -fx-background-radius: 10px;
 }
 .sidebar_button:hover {
-    -fx-background-color: #0d594d;
-    -fx-border-width: 0px 0px 2px 0px;
-    -fx-border-color: white;
+    -fx-background-color: #0a433a;
+
 }
 .sidebar_button:pressed {
     -fx-background-color: #0a433a !important;
 }
+
+.active-button {
+    -fx-background-color: #0d594d;
+
+}
+
 
 
 

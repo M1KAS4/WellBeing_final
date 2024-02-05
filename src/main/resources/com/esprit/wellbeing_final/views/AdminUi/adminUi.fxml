@@ -8,13 +8,13 @@
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0"
             prefWidth="780.0" style="-fx-background-color: #F8F2E6;" xmlns="http://javafx.com/javafx/17.0.2-ea"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.esprit.wellbeing_final.controllers.AdminController">
+            fx:controller="com.esprit.wellbeing_final.controllers.admin.AdminController">
     <left>
         <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #043730;" styleClass="pane_left"
-                    stylesheets="@../style/login.css" BorderPane.alignment="CENTER">
+                    stylesheets="@../../style/style.css" BorderPane.alignment="CENTER">
             <children>
                 <VBox alignment="TOP_CENTER" prefHeight="460.0" prefWidth="200.0" style="-fx-background-color: #043730;"
-                      styleClass="pane_left" stylesheets="@../style/login.css">
+                      styleClass="pane_left" stylesheets="@../../style/style.css">
                     <children>
                         <AnchorPane prefHeight="60.0">
                             <children>
@@ -36,7 +36,7 @@
                         </AnchorPane>
                         <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="205.0"
                                 style="-fx-border-width: 2px 0px 1px 0px;" styleClass="sidebar_button"
-                                stylesheets="@../style/login.css" text="Profile" textFill="WHITE">
+                                stylesheets="@../../style/style.css" text="Profile" textFill="WHITE">
                             <font>
                                 <Font name="System Bold" size="15.0"/>
                             </font>
@@ -50,7 +50,7 @@
                         <Button fx:id="quizbut" mnemonicParsing="false"
                                 prefHeight="38.0" prefWidth="205.0"
                                 style="-fx-border-width: 0px 0px 2px 0px;" styleClass="sidebar_button"
-                                stylesheets="@../style/login.css" text="Stress Quiz" textFill="WHITE">
+                                stylesheets="@../../style/style.css" text="Stress Quiz" textFill="WHITE">
                             <font>
                                 <Font name="System Bold" size="15.0"/>
                             </font>
@@ -59,7 +59,7 @@
                             </cursor>
                         </Button>
                         <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="205.0" styleClass="sidebar_button"
-                                stylesheets="@../style/login.css" text="Exercices" textFill="WHITE">
+                                stylesheets="@../../style/style.css" text="Exercices" textFill="WHITE">
                             <font>
                                 <Font name="System Bold" size="15.0"/>
                             </font>
@@ -69,7 +69,7 @@
                         </Button>
                         <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="205.0"
                                 style="-fx-border-width: 0px 0px 2px 0px;" styleClass="sidebar_button"
-                                stylesheets="@../style/login.css" text="Educatif Ressources" textFill="WHITE">
+                                stylesheets="@../../style/style.css" text="Educatif Ressources" textFill="WHITE">
                             <font>
                                 <Font name="System Bold" size="15.0"/>
                             </font>
@@ -79,7 +79,7 @@
                         </Button>
                         <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="200.0"
                                 style="-fx-border-width: 0px 0px 2px 0px;" styleClass="sidebar_button"
-                                stylesheets="@../style/login.css" text="Exchanging Space" textFill="WHITE">
+                                stylesheets="@../../style/style.css" text="Exchanging Space" textFill="WHITE">
                             <font>
                                 <Font name="System Bold" size="15.0"/>
                             </font>
