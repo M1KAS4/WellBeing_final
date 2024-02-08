@@ -1,44 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.Cursor?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.ToggleButton?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.wellbeing_final.controllers.auth.LoginController">
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0"
+            prefWidth="780.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.esprit.wellbeing_final.controllers.auth.LoginController">
     <center>
-        <VBox alignment="TOP_RIGHT" prefWidth="449.0" styleClass="vbox_background_center" stylesheets="@../style/style.css" BorderPane.alignment="CENTER">
+        <VBox alignment="TOP_RIGHT" prefWidth="449.0" styleClass="vbox_background_center"
+              stylesheets="@../style/style.css" BorderPane.alignment="CENTER">
             <BorderPane.margin>
-                <Insets />
+                <Insets/>
             </BorderPane.margin>
             <children>
                 <HBox alignment="CENTER_LEFT" prefHeight="72.0" prefWidth="446.0">
                     <children>
-                        <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="39.0" style="-fx-background-radius: 50; -fx-border-radius: 50; -fx-background-color: black;" text="Cc." textFill="WHITE">
+                        <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="39.0"
+                                style="-fx-background-radius: 50; -fx-border-radius: 50; -fx-background-color: black;"
+                                text="Cc." textFill="WHITE">
                             <font>
-                                <Font name="System Bold" size="12.0" />
+                                <Font name="System Bold" size="12.0"/>
                             </font>
                             <HBox.margin>
-                                <Insets left="15.0" />
+                                <Insets left="15.0"/>
                             </HBox.margin>
                         </Button>
-                        <Button alignment="CENTER" mnemonicParsing="false" prefHeight="38.0" prefWidth="191.0" style="-fx-background-radius: 50; -fx-background-color: #ed6637;" text="Login To you account" textFill="WHITE">
+                        <Button alignment="CENTER" mnemonicParsing="false" prefHeight="38.0" prefWidth="191.0"
+                                style="-fx-background-radius: 50; -fx-background-color: #ed6637;"
+                                text="Login To you account" textFill="WHITE">
                             <font>
-                                <Font name="System Bold" size="16.0" />
+                                <Font name="System Bold" size="16.0"/>
                             </font>
                             <HBox.margin>
-                                <Insets left="190.0" />
+                                <Insets left="190.0"/>
                             </HBox.margin>
                         </Button>
                     </children>
@@ -47,134 +45,154 @@
                     <children>
                         <Label alignment="BOTTOM_CENTER" text="Space">
                             <font>
-                                <Font name="Impact" size="48.0" />
+                                <Font name="Impact" size="48.0"/>
                             </font>
                         </Label>
                         <Label text="For" textFill="#d4baba">
                             <font>
-                                <Font name="Impact" size="48.0" />
+                                <Font name="Impact" size="48.0"/>
                             </font>
                             <HBox.margin>
-                                <Insets left="15.0" />
+                                <Insets left="15.0"/>
                             </HBox.margin>
                         </Label>
                     </children>
                     <VBox.margin>
-                        <Insets />
+                        <Insets/>
                     </VBox.margin>
                 </HBox>
                 <HBox alignment="CENTER" prefHeight="55.0" prefWidth="446.0">
                     <children>
                         <Label text="Your" textFill="#d4baba">
                             <font>
-                                <Font name="Impact" size="48.0" />
+                                <Font name="Impact" size="48.0"/>
                             </font>
                         </Label>
                         <Label alignment="TOP_CENTER" text="Employees">
                             <font>
-                                <Font name="Impact" size="48.0" />
+                                <Font name="Impact" size="48.0"/>
                             </font>
                             <HBox.margin>
-                                <Insets left="15.0" />
+                                <Insets left="15.0"/>
                             </HBox.margin>
                         </Label>
                     </children>
                 </HBox>
             </children>
             <opaqueInsets>
-                <Insets />
+                <Insets/>
             </opaqueInsets>
         </VBox>
     </center>
     <right>
-        <VBox prefHeight="460.0" prefWidth="334.0" styleClass="vbox_background_right" stylesheets="@../style/style.css" BorderPane.alignment="CENTER">
+        <VBox prefHeight="460.0" prefWidth="334.0" styleClass="vbox_background_right" stylesheets="@../style/style.css"
+              BorderPane.alignment="CENTER">
             <children>
                 <VBox alignment="BOTTOM_CENTER" prefHeight="153.0" prefWidth="334.0">
                     <children>
-                        <Text fill="#d39d59" strokeType="OUTSIDE" strokeWidth="0.0" text="CALM" wrappingWidth="141.04296934604645">
+                        <Text fill="#d39d59" strokeType="OUTSIDE" strokeWidth="0.0" text="CALM"
+                              wrappingWidth="141.04296934604645">
                             <font>
-                                <Font name="System Bold" size="36.0" />
+                                <Font name="System Bold" size="36.0"/>
                             </font>
                         </Text>
-                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Oasis" textAlignment="RIGHT" wrappingWidth="78.64288973808289">
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Oasis" textAlignment="RIGHT"
+                              wrappingWidth="78.64288973808289">
                             <font>
-                                <Font name="System Bold Italic" size="27.0" />
+                                <Font name="System Bold Italic" size="27.0"/>
                             </font>
                         </Text>
                     </children>
                 </VBox>
                 <Label alignment="TOP_RIGHT" prefHeight="20.0" prefWidth="84.0" text="Email" textFill="WHITE">
                     <font>
-                        <Font name="System Bold" size="14.0" />
+                        <Font name="System Bold" size="14.0"/>
                     </font>
                     <VBox.margin>
-                        <Insets />
+                        <Insets/>
                     </VBox.margin>
                 </Label>
                 <HBox alignment="TOP_CENTER" prefHeight="52.0" prefWidth="334.0">
                     <children>
-                        <TextField fx:id="emailTextField" prefHeight="35.0" prefWidth="260.0" promptText="Email" style="-fx-background-radius: 50; -fx-border-radius: 50;">
+                        <TextField fx:id="emailTextField" prefHeight="35.0" prefWidth="260.0" promptText="Email"
+                                   style="-fx-background-radius: 50; -fx-border-radius: 50;">
                             <HBox.margin>
-                                <Insets top="5.0" />
+                                <Insets top="5.0"/>
                             </HBox.margin>
                             <cursor>
-                                <Cursor fx:constant="HAND" />
+                                <Cursor fx:constant="HAND"/>
                             </cursor>
                         </TextField>
                     </children>
                     <VBox.margin>
-                        <Insets />
+                        <Insets/>
                     </VBox.margin>
                 </HBox>
                 <Label alignment="TOP_RIGHT" prefHeight="20.0" prefWidth="112.0" text="Password" textFill="WHITE">
                     <font>
-                        <Font name="System Bold" size="14.0" />
+                        <Font name="System Bold" size="14.0"/>
                     </font>
                 </Label>
                 <HBox alignment="TOP_RIGHT" prefHeight="52.0" prefWidth="334.0">
                     <children>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                     <children>
-                              <PasswordField fx:id="pwPasswordField" prefHeight="35.0" prefWidth="260.0" promptText="Password" style="-fx-background-radius: 50; -fx-border-radius: 50;">
-                                  <cursor>
-                                      <Cursor fx:constant="HAND" />
-                                  </cursor>
-                              </PasswordField>
-                        <TextField fx:id="pwTextField" prefHeight="35.0" prefWidth="260.0" promptText="Password" style="-fx-background-radius: 50; -fx-border-radius: 50;" visible="false">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </TextField>
-                     </children>
-                  </AnchorPane>
-                        <ToggleButton fx:id="togglePasswordButton" prefHeight="10.0" prefWidth="10.0" style="-fx-background-color: transparent;">
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                            <children>
+                                <PasswordField fx:id="pwPasswordField" prefHeight="35.0" prefWidth="260.0"
+                                               promptText="Password"
+                                               style="-fx-background-radius: 50; -fx-border-radius: 50;"
+                                               AnchorPane.rightAnchor="0.0">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND"/>
+                                    </cursor>
+                                </PasswordField>
+                                <TextField fx:id="pwTextField" prefHeight="35.0" prefWidth="260.0" promptText="Password"
+                                           style="-fx-background-radius: 50; -fx-border-radius: 50;" visible="false">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND"/>
+                                    </cursor>
+                                </TextField>
+                            </children>
+                        </AnchorPane>
+                        <ToggleButton fx:id="togglePasswordButton" prefHeight="10.0" prefWidth="10.0"
+                                      style="-fx-background-color: transparent;">
                             <graphic>
                                 <ImageView fitHeight="22.0" fitWidth="18.0">
                                     <image>
-                                        <Image url="@../images/eye.png" />
+                                        <Image url="@../images/eye.png"/>
                                     </image>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND"/>
+                                    </cursor>
                                 </ImageView>
                             </graphic>
-                     <HBox.margin>
-                        <Insets top="2.0" />
-                     </HBox.margin>
+                            <HBox.margin>
+                                <Insets top="2.0"/>
+                            </HBox.margin>
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
                         </ToggleButton>
                     </children>
                     <VBox.margin>
-                        <Insets top="5.0" />
+                        <Insets top="5.0"/>
                     </VBox.margin>
                 </HBox>
                 <HBox alignment="CENTER" prefHeight="52.0" prefWidth="334.0">
                     <children>
-                        <Button fx:id="loginbutton" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="26.0" prefWidth="106.0" style="-fx-background-radius: 50; -fx-border-radius: 50; -fx-background-color: #ed6637;" text="Login" textFill="WHITE">
+                        <Button fx:id="loginbutton" mnemonicParsing="false" onAction="#loginButtonOnAction"
+                                prefHeight="26.0" prefWidth="106.0"
+                                style="-fx-background-radius: 50; -fx-border-radius: 50; -fx-background-color: #ed6637;"
+                                text="Login" textFill="WHITE">
                             <font>
-                                <Font name="System Bold" size="15.0" />
+                                <Font name="System Bold" size="15.0"/>
                             </font>
                             <cursor>
-                                <Cursor fx:constant="HAND" />
+                                <Cursor fx:constant="HAND"/>
                             </cursor>
                         </Button>
-                        <Label fx:id="loginMessageLabel" alignment="CENTER" ellipsisString="" layoutX="95.0" layoutY="132.0" prefHeight="18.0" prefWidth="0.0" textAlignment="CENTER" textFill="#144272" wrapText="true" />
+                        <Label fx:id="loginMessageLabel" alignment="CENTER" ellipsisString="" layoutX="95.0"
+                               layoutY="132.0" prefHeight="18.0" prefWidth="0.0" textAlignment="CENTER"
+                               textFill="#144272" wrapText="true"/>
                     </children>
                 </HBox>
                 <HBox alignment="CENTER" prefHeight="100.0" prefWidth="334.0">
@@ -185,15 +203,17 @@
                                     <children>
                                         <Label fx:id="MessageLabel" text="Label" textFill="WHITE" visible="false">
                                             <HBox.margin>
-                                                <Insets top="10.0" />
+                                                <Insets top="10.0"/>
                                             </HBox.margin>
                                             <font>
-                                                <Font name="System Bold" size="13.0" />
+                                                <Font name="System Bold" size="13.0"/>
                                             </font>
                                         </Label>
                                     </children>
                                 </HBox>
-                                <Text fill="#fafafa" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright ©. All Rights Reserved" textAlignment="CENTER" wrappingWidth="317.490234375" />
+                                <Text fill="#fafafa" strokeType="OUTSIDE" strokeWidth="0.0"
+                                      text="Copyright ©. All Rights Reserved" textAlignment="CENTER"
+                                      wrappingWidth="317.490234375"/>
                             </children>
                         </VBox>
                     </children>

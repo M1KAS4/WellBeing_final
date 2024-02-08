@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane fx:id="anch" onMouseClicked="#init" prefHeight="190" prefWidth="168" styleClass="anch"
+            stylesheets="@../../style/style.css" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.esprit.wellbeing_final.controllers.employee.ExerciceController">
+    <children>
+        <Pane prefHeight="190" prefWidth="168">
+            <children>
+                <Button mnemonicParsing="false" opacity="0.7" prefHeight="190.0" prefWidth="168.0" styleClass="button2"
+                        stylesheets="@../../style/fullpackstyling.css"/>
+
+                <ImageView fitHeight="71.0" fitWidth="63.0" layoutX="53.0" layoutY="45.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../../images/img.png"/>
+                    </image>
+                </ImageView>
+                <Label fx:id="name" alignment="CENTER" layoutX="-6.0" layoutY="146.0" prefHeight="17.0"
+                       prefWidth="174.0" text="General" textFill="WHITE">
+                    <font>
+                        <Font name="Arial Bold" size="13.0"/>
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

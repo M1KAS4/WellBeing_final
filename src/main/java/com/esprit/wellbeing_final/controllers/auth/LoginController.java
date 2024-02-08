@@ -3,6 +3,7 @@ package com.esprit.wellbeing_final.controllers.auth;
 import com.esprit.wellbeing_final.controllers.admin.AdminController;
 import com.esprit.wellbeing_final.controllers.coach.CoachController;
 import com.esprit.wellbeing_final.controllers.employee.EmployeeController;
+import com.esprit.wellbeing_final.controllers.employee.QuizController;
 import com.esprit.wellbeing_final.entities.Role;
 import com.esprit.wellbeing_final.entities.User;
 import com.esprit.wellbeing_final.services.UserService;
@@ -94,8 +95,6 @@ public class LoginController {
 
     // Method to validate email format
     private boolean isValidEmail(String email) {
-        // You can implement your own email validation logic here
-        // For simplicity, we're using a basic regex pattern
         String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
         return email.matches(emailRegex);
     }
@@ -133,10 +132,16 @@ public class LoginController {
                 Object controller = loader.getController();
                 if (controller instanceof EmployeeController) {
                     ((EmployeeController) controller).setUserData(user);
+                    ((EmployeeController) controller).renderProfile();
+                    System.out.println("tet");
                 } else if (controller instanceof AdminController) {
                     ((AdminController) controller).setUserData(user);
+                    ((AdminController) controller).renderUserList();
                 } else if (controller instanceof CoachController) {
                     ((CoachController) controller).setUserData(user);
+                } else if (controller instanceof QuizController) {
+
+                    ((QuizController) controller).setUserData(user);
                 }
 
                 // Show the stage

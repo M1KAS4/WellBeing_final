@@ -1,90 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0"
-            prefWidth="780.0" style="-fx-background-color: #F8F2E6;" xmlns="http://javafx.com/javafx/17.0.2-ea"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.esprit.wellbeing_final.controllers.coach.CoachController">
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="780.0" style="-fx-background-color: #F8F2E6;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.wellbeing_final.controllers.coach.CoachController">
     <left>
-        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #043730;" styleClass="pane_left"
-                    stylesheets="@../../style/style.css" BorderPane.alignment="CENTER">
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #043730;" styleClass="pane_left" stylesheets="@../../style/style.css" BorderPane.alignment="CENTER">
             <children>
-                <VBox alignment="TOP_CENTER" prefHeight="460.0" prefWidth="200.0" style="-fx-background-color: #043730;"
-                      styleClass="pane_left" stylesheets="@../../style/style.css">
+                <VBox alignment="TOP_CENTER" prefHeight="460.0" prefWidth="200.0" style="-fx-background-color: #043730;" styleClass="pane_left" stylesheets="@../../style/style.css">
                     <children>
-                        <AnchorPane prefHeight="60.0">
+                        <AnchorPane prefHeight="79.0" prefWidth="200.0" style="-fx-border-width: 0px 0px 1px 0px; -fx-border-color: white;">
                             <children>
-                                <Label fx:id="nomLabel" text="Nom Prenom" textAlignment="CENTER" textFill="#acd5ff"
-                                       wrapText="true" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"
-                                       AnchorPane.topAnchor="10.0">
+                                <Label fx:id="nomLabel" layoutX="14.4" layoutY="27.0" prefHeight="27.0" prefWidth="111.0" text="Nom Prenom" textAlignment="CENTER" textFill="#ed6637" wrapText="true" AnchorPane.leftAnchor="14.4" AnchorPane.rightAnchor="55.2" AnchorPane.topAnchor="27.0">
                                     <font>
-                                        <Font size="14.0"/>
+                                        <Font size="14.0" />
                                     </font>
                                 </Label>
-                                <Label fx:id="roleLabel" layoutX="10.0" layoutY="10.0" text="Role"
-                                       textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="10.0"
-                                       AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="30.0">
+                                <Label fx:id="roleLabel" layoutX="14.0" layoutY="52.0" prefHeight="22.0" prefWidth="134.0" text="Role" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="31.0" AnchorPane.topAnchor="52.0">
                                     <font>
-                                        <Font size="13.0"/>
+                                        <Font size="14.0" />
                                     </font>
                                 </Label>
+                                <Text fill="WHITE" layoutX="13.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome Back !" wrappingWidth="134.13671875">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Text>
                             </children>
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
                         </AnchorPane>
-                        <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="205.0"
-                                style="-fx-border-width: 2px 0px 1px 0px;" styleClass="sidebar_button"
-                                stylesheets="@../../style/style.css" text="Profile" textFill="WHITE">
+                        <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="205.0" style="-fx-border-width: 2px 0px 1px 0px;" styleClass="sidebar_button" stylesheets="@../../style/style.css" text="Profile" textFill="WHITE">
                             <font>
-                                <Font name="System Bold" size="15.0"/>
+                                <Font name="System Bold" size="15.0" />
                             </font>
                             <VBox.margin>
-                                <Insets top="10.0"/>
+                                <Insets top="10.0" />
                             </VBox.margin>
                             <cursor>
-                                <Cursor fx:constant="HAND"/>
+                                <Cursor fx:constant="HAND" />
                             </cursor>
                         </Button>
-                        <Button fx:id="quizbut" mnemonicParsing="false"
-                                prefHeight="38.0" prefWidth="205.0"
-                                style="-fx-border-width: 0px 0px 2px 0px;" styleClass="sidebar_button"
-                                stylesheets="@../../style/style.css" text="Stress Quiz" textFill="WHITE">
+                        <Button fx:id="quizbut" mnemonicParsing="false" prefHeight="38.0" prefWidth="205.0" style="-fx-border-width: 0px 0px 2px 0px;" styleClass="sidebar_button" stylesheets="@../../style/style.css" text="Pending Appointments" textFill="WHITE">
                             <font>
-                                <Font name="System Bold" size="15.0"/>
+                                <Font name="System Bold" size="15.0" />
                             </font>
                             <cursor>
-                                <Cursor fx:constant="HAND"/>
+                                <Cursor fx:constant="HAND" />
                             </cursor>
                         </Button>
-                        <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="205.0" styleClass="sidebar_button"
-                                stylesheets="@../../style/style.css" text="Exercices" textFill="WHITE">
+                        <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="205.0" styleClass="sidebar_button" stylesheets="@../../style/style.css" text="Appointments" textFill="WHITE">
                             <font>
-                                <Font name="System Bold" size="15.0"/>
+                                <Font name="System Bold" size="15.0" />
                             </font>
                             <cursor>
-                                <Cursor fx:constant="HAND"/>
-                            </cursor>
-                        </Button>
-                        <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="205.0"
-                                style="-fx-border-width: 0px 0px 2px 0px;" styleClass="sidebar_button"
-                                stylesheets="@../../style/style.css" text="Educatif Ressources" textFill="WHITE">
-                            <font>
-                                <Font name="System Bold" size="15.0"/>
-                            </font>
-                            <cursor>
-                                <Cursor fx:constant="HAND"/>
-                            </cursor>
-                        </Button>
-                        <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="200.0"
-                                style="-fx-border-width: 0px 0px 2px 0px;" styleClass="sidebar_button"
-                                stylesheets="@../../style/style.css" text="Exchanging Space" textFill="WHITE">
-                            <font>
-                                <Font name="System Bold" size="15.0"/>
-                            </font>
-                            <cursor>
-                                <Cursor fx:constant="HAND"/>
+                                <Cursor fx:constant="HAND" />
                             </cursor>
                         </Button>
                     </children>
@@ -93,6 +72,6 @@
         </AnchorPane>
     </left>
     <center>
-        <Pane fx:id="rendrer" prefHeight="460.0" prefWidth="580.0" BorderPane.alignment="CENTER"/>
+        <Pane fx:id="rendrer" prefHeight="460.0" prefWidth="580.0" BorderPane.alignment="CENTER" />
     </center>
 </BorderPane>

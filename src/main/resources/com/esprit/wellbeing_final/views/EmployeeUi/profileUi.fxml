@@ -1,18 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0"
-      prefWidth="580.0" style="-fx-background-color: #F8F2E6;" xmlns="http://javafx.com/javafx/21"
-      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.wellbeing_final.controllers.employee.ProfileController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="580.0" style="-fx-background-color: #F8F2E6;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.wellbeing_final.controllers.employee.ProfileController">
     <children>
-        <Text layoutX="203.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profile space"
-              wrappingWidth="174.93670654296875">
+
+        <Label layoutX="37.0" layoutY="37.0" text="First Name">
             <font>
-                <Font size="28.0"/>
+                <Font name="System Bold" size="14.0" />
             </font>
-        </Text>
+        </Label>
+        <HBox alignment="CENTER" layoutX="108.0" layoutY="26.0" prefHeight="42.0" prefWidth="161.0">
+            <children>
+                <Pane prefHeight="100.0" prefWidth="160.0">
+                    <children>
+                        <TextField fx:id="NameField" disable="true" layoutX="6.0" layoutY="6.0" prefHeight="30.0" prefWidth="149.0" style="-fx-border-radius: 50; -fx-background-radius: 50;" />
+                        <FontAwesomeIcon fill="#9c9a9a" iconName="USER" layoutX="136.0" layoutY="25.0" selectionFill="#6e6b6b" />
+                    </children>
+                </Pane>
+            </children>
+        </HBox>
+        <Label layoutX="280.0" layoutY="37.0" text="Last Name">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <HBox layoutX="358.0" layoutY="32.0" prefHeight="30.0" prefWidth="149.0">
+            <children>
+                <Pane prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <TextField fx:id="LastField" disable="true" layoutY="-1.0" prefHeight="30.0" prefWidth="149.0" style="-fx-background-radius: 50;" />
+                        <FontAwesomeIcon fill="#9c9a9a" iconName="USER" layoutX="130.0" layoutY="18.0" selectionFill="#6e6b6b" />
+                    </children>
+                </Pane>
+            </children>
+        </HBox>
+        <Label layoutX="53.0" layoutY="83.0" text="Email">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <HBox layoutX="114.0" layoutY="78.0" prefHeight="30.0" prefWidth="150.0">
+            <children>
+                <Pane prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <TextField fx:id="EmailField" disable="true" prefHeight="30.0" prefWidth="149.0" style="-fx-background-radius: 50;" />
+                        <FontAwesomeIcon fill="#9c9a9a" iconName="ENVELOPE" layoutX="124.0" layoutY="19.0" selectionFill="#6e6b6b" />
+                    </children>
+                </Pane>
+            </children>
+        </HBox>
+
+
+        <Label layoutX="300.0" layoutY="83.0" text="Role">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <HBox layoutX="358.0" layoutY="78.0" prefHeight="30.0" prefWidth="149.0">
+            <children>
+                <Pane prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <TextField fx:id="RoleField" disable="true" prefHeight="30.0" prefWidth="149.0" style="-fx-background-radius: 50;" />
+                        <FontAwesomeIcon fill="#9c9a9a" iconName="BRIEFCASE" layoutX="124.0" layoutY="19.0" selectionFill="#6e6b6b" />
+                    </children>
+                </Pane>
+            </children>
+        </HBox>
     </children>
 </Pane>

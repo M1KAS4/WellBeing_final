@@ -10,7 +10,9 @@ module com.esprit.wellbeing_final {
     requires org.kordamp.bootstrapfx.core;
     requires com.almasb.fxgl.all;
     requires java.sql;
-
+    requires mail;
+    requires itextpdf;
+    requires java.desktop;
     opens com.esprit.wellbeing_final to javafx.fxml;
     exports com.esprit.wellbeing_final;
 
@@ -23,5 +25,7 @@ module com.esprit.wellbeing_final {
     opens com.esprit.wellbeing_final.controllers.auth to javafx.fxml;
     exports com.esprit.wellbeing_final.controllers.coach;
     opens com.esprit.wellbeing_final.controllers.coach to javafx.fxml;
+
+    opens com.esprit.wellbeing_final.entities to javafx.base;
 
 }

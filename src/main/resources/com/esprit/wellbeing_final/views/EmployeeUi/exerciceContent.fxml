@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.web.WebView?>
+<AnchorPane fx:id="myanchor" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.esprit.wellbeing_final.controllers.employee.ExerciceContentController">
+    <children>
+        <Label layoutX="51.0" layoutY="49.0" prefHeight="23.0" prefWidth="37.0" text="Title : "/>
+        <Label layoutX="51.0" layoutY="87.0" text="Description :"/>
+        <Label layoutX="51.0" layoutY="121.0" text="Duration :"/>
+        <Label layoutX="51.0" layoutY="152.0" text="Type :"/>
+        <Label layoutX="53.0" layoutY="183.0" text="Link :"/>
+        <Label fx:id="desc" layoutX="128.0" layoutY="87.0"/>
+        <Label fx:id="title" layoutX="90.0" layoutY="52.0"/>
+        <Label fx:id="duration" layoutX="114.0" layoutY="121.0"/>
+        <Label fx:id="type" layoutX="103.0" layoutY="152.0"/>
+        <Label fx:id="link" layoutX="100.0" layoutY="183.0"/>
+        <Button onAction="#startVideo" layoutX="274.0" layoutY="239.0" mnemonicParsing="false" text="Show video"/>
+        <WebView fx:id="webView" layoutX="0.0" layoutY="0.0" prefWidth="600.0" prefHeight="400.0" visible="false"/>
+
+    </children>
+</AnchorPane>

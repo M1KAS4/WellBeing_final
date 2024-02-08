@@ -11,49 +11,92 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0"
-      prefWidth="580.0" style="-fx-background-color: #F8F2E6;" xmlns="http://javafx.com/javafx/21"
-      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.wellbeing_final.controllers.employee.QuizController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="580.0" style="-fx-background-color: #F8F2E6;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.wellbeing_final.controllers.employee.QuizController">
     <children>
         <ImageView fx:id="imgbg" fitHeight="460.0" fitWidth="580.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../images/quiz.png"/>
+                <Image url="@../../images/quiz.png" />
             </image>
         </ImageView>
-        <Label fx:id="textGen" alignment="CENTER" layoutX="297.0" layoutY="109.0" prefHeight="121.0" prefWidth="281.0"
-               text="Welcome To &#10;Your Weekly Quiz ! " textAlignment="CENTER">
+        <Label fx:id="textGen" alignment="CENTER" layoutX="297.0" layoutY="109.0" prefHeight="121.0" prefWidth="281.0" text="Welcome To &#10;Your Weekly Quiz ! " textAlignment="CENTER">
             <font>
-                <Font name="System Bold" size="29.0"/>
+                <Font name="System Bold" size="29.0" />
             </font>
         </Label>
         <Label fx:id="textGen1" alignment="CENTER" layoutX="361.0" layoutY="222.0" text="Get Started Now !">
             <font>
-                <Font name="System Bold" size="18.0"/>
+                <Font name="System Bold" size="18.0" />
             </font>
         </Label>
-        <ToggleButton fx:id="startBtn" layoutX="357.0" layoutY="267.0" mnemonicParsing="false" onAction="#start"
-                      prefHeight="45.0" prefWidth="160.0"
-                      style="-fx-background-radius: 50; -fx-border-radius: 50; -fx-background-color: #ed6637;"
-                      text="Start Quiz" textFill="WHITE">
+        <ToggleButton fx:id="startBtn" layoutX="357.0" layoutY="267.0" mnemonicParsing="false" onAction="#start" prefHeight="45.0" prefWidth="160.0" style="-fx-background-radius: 50; -fx-border-radius: 50; -fx-background-color: #ed6637;" text="Start Quiz" textFill="WHITE">
             <font>
-                <Font name="System Bold" size="19.0"/>
+                <Font name="System Bold" size="19.0" />
             </font>
             <cursor>
-                <Cursor fx:constant="HAND"/>
+                <Cursor fx:constant="HAND" />
             </cursor>
         </ToggleButton>
-        <Pane fx:id="qstPane" layoutX="14.0" layoutY="84.0" prefHeight="303.0" prefWidth="454.0" visible="fase">
+        <Pane fx:id="qstPane" layoutX="10.0" layoutY="34.0" prefHeight="409.0" prefWidth="560.0" visible="false">
             <children>
-                <Label fx:id="questionLabel" layoutX="7.0" layoutY="6.0" prefHeight="17.0" prefWidth="429.0"
-                       text="Label"/>
-                <Button layoutX="384.0" layoutY="264.0" mnemonicParsing="false" onAction="#next" text="Next"/>
-                <ScrollPane fitToHeight="true" fitToWidth="true" layoutY="37.0" prefHeight="224.0" prefWidth="454.0">
+                <Label fx:id="questionLabel" alignment="TOP_LEFT" layoutX="7.0" layoutY="6.0" prefHeight="69.0" prefWidth="547.0" text="Label" wrapText="true">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Button layoutX="397.0" layoutY="362.0" mnemonicParsing="false" onAction="#next" prefHeight="40.0" prefWidth="88.0" style="-fx-border-radius: 50px; -fx-background-radius: 50px; -fx-background-color: #ed6637;">
+                    <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../images/arrowNext.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button layoutX="293.0" layoutY="362.0" mnemonicParsing="false" onAction="#previous" prefHeight="40.0" prefWidth="88.0" style="-fx-background-radius: 50px; -fx-border-radius: 50px; -fx-background-color: #ed6637;">
+                    <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../images/arrowPrev.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="3.0" layoutY="70.0" prefHeight="290.0" prefWidth="554.0" style="-fx-background-color: transperent;">
                     <content>
-                        <VBox fx:id="answersRendrer" prefHeight="239.0" prefWidth="396.0"/>
+                        <VBox fx:id="answersRendrer" prefHeight="239.0" prefWidth="553.0" style="-fx-background-color: #F8F2E6; -fx-border-color: #F8F2E6;" />
                     </content>
                 </ScrollPane>
             </children>
         </Pane>
-        <Label fx:id="score" layoutX="336.0" layoutY="51.0" textFill="#e42828"/>
+        <Pane fx:id="scPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="580.0" style="-fx-background-color: #F8F2E6;" visible="false">
+            <children>
+                <ImageView fx:id="scImg" fitHeight="290.0" fitWidth="401.0" layoutX="179.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../images/score.png" />
+                    </image>
+                </ImageView>
+                <Label fx:id="scLabel" alignment="TOP_LEFT" layoutX="67.0" layoutY="52.0" prefHeight="81.0" prefWidth="323.0" text="Congratulations on completing &#10;your quiz" textFill="#043730" wrapText="true">
+                    <font>
+                        <Font name="System Bold" size="21.0" />
+                    </font>
+                </Label>
+                <Label fx:id="nomLabel" layoutX="174.0" layoutY="83.0" prefHeight="31.0" prefWidth="281.0" text="Nom Prenom" textFill="#ed6637">
+                    <font>
+                        <Font name="System Bold Italic" size="21.0" />
+                    </font>
+                </Label>
+                <Label fx:id="scsLabel" alignment="TOP_CENTER" layoutX="88.0" layoutY="124.0" prefHeight="40.0" prefWidth="323.0" text="Your Stress Level is" textAlignment="CENTER" textFill="#043730" wrapText="true">
+                    <font>
+                        <Font name="System Bold" size="21.0" />
+                    </font>
+                </Label>
+                <Label fx:id="score" layoutX="221.0" layoutY="164.0" prefHeight="30.0" prefWidth="94.0" text="score" textFill="#ed6637">
+                    <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                    </font>
+                </Label>
+            <Label fx:id="freq" alignment="TOP_LEFT" layoutX="11.0" layoutY="222.0" prefHeight="81.0" prefWidth="263.0" text="Label" wrapText="true" />
+            </children>
+        </Pane>
     </children>
 </Pane>
