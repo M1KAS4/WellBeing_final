@@ -1,40 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
-<AnchorPane prefHeight="410.0" prefWidth="684.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.wellbeing_final.controllers.employee.ListeRendevouz">
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-    <Text layoutX="200.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste des rendevou"
-          wrappingWidth="282.93670654296875" AnchorPane.leftAnchor="200.0">
+<AnchorPane prefHeight="460.0" prefWidth="580.0" style="-fx-background-color: #F8F2E6;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.wellbeing_final.controllers.employee.ListeRendevouz">
+
+    <Text fill="#043730" layoutX="191.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My Appointments" wrappingWidth="198.93670654296875" AnchorPane.leftAnchor="191.0">
         <font>
-            <Font name="Arial" size="24.0"/>
+            <Font name="System Bold Italic" size="24.0" />
         </font>
     </Text>
-    <TableView fx:id="EVENTTAB" layoutX="61.0" layoutY="149.0" prefHeight="218.0" prefWidth="525.0">
+    <TableView fx:id="EVENTTAB" layoutX="23.0" layoutY="130.0" prefHeight="238.0" prefWidth="539.0">
         <columns>
-            <TableColumn fx:id="id" prefWidth="75.0" text="id"/>
-            <TableColumn fx:id="nom" prefWidth="75.0" text="nom"/>
-            <TableColumn fx:id="description" prefWidth="75.0" text="description"/>
-            <TableColumn fx:id="lieu" prefWidth="75.0" text="lieu"/>
-            <TableColumn fx:id="date" prefWidth="75.0" text="date"/>
-            <TableColumn fx:id="telephone" prefWidth="75.0" text="telephone"/>
-            <TableColumn fx:id="status" prefWidth="75.0" text="status"/>
+            <TableColumn fx:id="id" prefWidth="75.0" text="Id" />
+            <TableColumn fx:id="nom" prefWidth="88.0" text="Name" />
+            <TableColumn fx:id="description" prefWidth="98.0" text="Description" />
+            <TableColumn fx:id="lieu" prefWidth="73.0" text="Place" />
+            <TableColumn fx:id="date" prefWidth="68.0" text="Date" />
+            <TableColumn fx:id="telephone" prefWidth="73.0" text="Phone" />
+            <TableColumn fx:id="status" prefWidth="63.0" text="Status" />
 
         </columns>
     </TableView>
-    <TextField fx:id="search" layoutX="488.0" layoutY="96.0" onKeyPressed="#filter" onKeyReleased="#filter"
-               onKeyTyped="#filter" promptText="chercher"/>
-    <Button layoutX="3.0" layoutY="95.0" mnemonicParsing="false" onMouseClicked="#AddRendevou" prefHeight="26.0"
-            prefWidth="94.0" text="ajout" textFill="black"/>
-    <Button layoutX="208.0" layoutY="95.0" mnemonicParsing="false" onMouseClicked="#supprimer" prefHeight="26.0"
-            prefWidth="82.0" text="supprimer" textFill="black"/>
-    <Button layoutX="556.0" layoutY="377.0" mnemonicParsing="false" onMouseClicked="#generer" prefHeight="26.0"
-            prefWidth="94.0" text="GenererPDF" textFill="black"/>
-    <Button fx:id="btnModifier" layoutX="105.0" layoutY="95.0" mnemonicParsing="false" onMouseClicked="#updateRendevou"
-            prefHeight="26.0" prefWidth="94.0" text="modifier" textFill="black"/>
+    <TextField fx:id="search" layoutX="408.0" layoutY="97.0" onKeyPressed="#filter" onKeyReleased="#filter" onKeyTyped="#filter" promptText="SEARCH" style="-fx-background-radius: 50;">
+      <cursor>
+         <Cursor fx:constant="TEXT" />
+      </cursor></TextField>
+    <Button layoutX="37.0" layoutY="96.0" mnemonicParsing="false" onMouseClicked="#AddRendevou" prefHeight="26.0" prefWidth="94.0" style="-fx-background-color: #ed6637; -fx-background-radius: 10;" styleClass="button-all" stylesheets="@../../style/style.css" text="Add" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor></Button>
+    <Button layoutX="242.0" layoutY="96.0" mnemonicParsing="false" onMouseClicked="#supprimer" prefHeight="26.0" prefWidth="82.0" style="-fx-background-color: #ed6637; -fx-background-radius: 10;" styleClass="button-all" stylesheets="@../../style/style.css" text="Delete" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor></Button>
+    <Button layoutX="453.0" layoutY="387.0" mnemonicParsing="false" onMouseClicked="#generer" prefHeight="26.0" prefWidth="94.0" style="-fx-background-radius: 10; -fx-background-color: #ed6637;" text="Export List" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor></Button>
+    <Button fx:id="btnModifier" layoutX="139.0" layoutY="96.0" mnemonicParsing="false" onMouseClicked="#updateRendevou" prefHeight="26.0" prefWidth="94.0" style="-fx-background-color: #ed6637; -fx-background-radius: 10;" styleClass="button-all" stylesheets="@../../style/style.css" text="Modify" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor></Button>
 
 
 </AnchorPane>

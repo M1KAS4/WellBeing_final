@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="580.0" style="-fx-background-color: #F8F2E6;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.wellbeing_final.controllers.employee.RessourcesController">
+    <children>
+        <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="8.0" layoutY="10.0" prefHeight="442.0" prefWidth="562.0" style="-fx-background-color: #F8F2E6;">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="437.0" prefWidth="531.0" style="-fx-background-color: #F8F2E6;">
+                    <children>
+                        <!-- Place your content here -->
+                        <VBox fx:id="resRendrer" prefWidth="543.0" spacing="10" style="-fx-background-color: #F8F2E6;" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </ScrollPane>
+
+    </children>
+</Pane>

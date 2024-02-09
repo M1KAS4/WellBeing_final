@@ -1,24 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.web.WebView?>
-<AnchorPane fx:id="myanchor" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.esprit.wellbeing_final.controllers.employee.ExerciceContentController">
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+
+<AnchorPane fx:id="myanchor" prefHeight="460.0" prefWidth="600.0" style="-fx-background-color: #FEDEC9;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.wellbeing_final.controllers.employee.ExerciceContentController">
     <children>
-        <Label layoutX="51.0" layoutY="49.0" prefHeight="23.0" prefWidth="37.0" text="Title : "/>
-        <Label layoutX="51.0" layoutY="87.0" text="Description :"/>
-        <Label layoutX="51.0" layoutY="121.0" text="Duration :"/>
-        <Label layoutX="51.0" layoutY="152.0" text="Type :"/>
-        <Label layoutX="53.0" layoutY="183.0" text="Link :"/>
-        <Label fx:id="desc" layoutX="128.0" layoutY="87.0"/>
-        <Label fx:id="title" layoutX="90.0" layoutY="52.0"/>
-        <Label fx:id="duration" layoutX="114.0" layoutY="121.0"/>
-        <Label fx:id="type" layoutX="103.0" layoutY="152.0"/>
-        <Label fx:id="link" layoutX="100.0" layoutY="183.0"/>
-        <Button onAction="#startVideo" layoutX="274.0" layoutY="239.0" mnemonicParsing="false" text="Show video"/>
-        <WebView fx:id="webView" layoutX="0.0" layoutY="0.0" prefWidth="600.0" prefHeight="400.0" visible="false"/>
+        <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../images/327.jpg" />
+            </image>
+        </ImageView>
+        <Text fill="#043730" layoutX="348.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exercice Details">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Text>
+        <ImageView fitHeight="27.0" fitWidth="33.0" layoutX="317.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../images/icons8-details-48.png" />
+            </image>
+        </ImageView>
+        <Pane layoutX="96.0" layoutY="73.0" prefHeight="276.0" prefWidth="475.0" styleClass="linear-gradient-pane" stylesheets="@../../style/style.css">
+            <children>
+                <Label layoutX="97.0" layoutY="9.0" prefHeight="23.0" prefWidth="52.0" text="Title : " textFill="WHITE">
+                    <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="title" alignment="CENTER" layoutX="141.0" layoutY="3.0" prefHeight="36.0" prefWidth="270.0" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Label layoutX="20.0" layoutY="41.0" text="Description :" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="desc" layoutX="114.0" layoutY="34.0" prefHeight="60.0" prefWidth="325.0" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+
+                <Label layoutX="20.0" layoutY="97.0" text="Duration :" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="duration" layoutX="100.0" layoutY="89.0" prefHeight="36.0" prefWidth="325.0" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Label layoutX="20.0" layoutY="127.0" text="Type :" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="type" layoutX="63.0" layoutY="126.0" prefHeight="21.0" prefWidth="315.0" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Label layoutX="23.0" layoutY="166.0" text="Link :" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="link" layoutX="64.0" layoutY="166.0" prefHeight="21.0" prefWidth="299.0" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Button layoutX="362.0" layoutY="226.0" mnemonicParsing="false" onAction="#startVideo" prefHeight="36.0" prefWidth="27.0" style="-fx-background-radius: 50; -fx-background-color: #043730;" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../images/icons8-video-50 .png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+            </children>
+        </Pane>
+        <Button fx:id="goback" layoutX="14.0" layoutY="349.0" mnemonicParsing="false" onAction="#GoBack" prefHeight="27.0" prefWidth="71.0" style="-fx-background-radius: 30; -fx-background-color: #043730;" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/icons8-arrow-50.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+        </Button>
+        <WebView fx:id="webView" layoutX="0.0" layoutY="0.0" prefHeight="400.0" prefWidth="600.0" visible="false" />
 
     </children>
 </AnchorPane>

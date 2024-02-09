@@ -2,11 +2,13 @@ package com.esprit.wellbeing_final.controllers.employee;
 
 import com.esprit.wellbeing_final.controllers.auth.LoginController;
 import com.esprit.wellbeing_final.entities.Exercice;
+import javafx.animation.ScaleTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.layout.Pane;
 import javafx.scene.web.WebView;
+import javafx.util.Duration;
 
 import java.io.IOException;
 import java.util.Objects;
@@ -28,9 +30,12 @@ public class ExerciceController {
         this.pane = pane;
     }
 
+
+
+
+
     @FXML
     public void init() throws IOException {
-
         pane.getChildren().removeAll();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/esprit/wellbeing_final/views/EmployeeUi/exerciceContent.fxml"));
         Node menu = loader.load();
@@ -38,5 +43,7 @@ public class ExerciceController {
         ExerciceContentController controller = loader.getController();
         controller.setData(exercice);
 
+        // Call resizePane with the new width and height
+        controller.resizePane(600, 400);
     }
 }

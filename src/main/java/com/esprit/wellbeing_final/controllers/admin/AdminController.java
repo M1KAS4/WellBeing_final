@@ -24,7 +24,7 @@ public class AdminController {
         setButtonActive(Userbut);
     }
     public void renderQuizList() {
-        loadView("/com/esprit/wellbeing_final/views/AdminUi/quizListUi.fxml");
+        loadView("/com/esprit/wellbeing_final/views/AfficherSuj.fxml.");
         setButtonActive(Userbut);
     }
 

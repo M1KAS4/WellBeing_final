@@ -6,17 +6,26 @@ public class User {
     private Long userId;
     private String firstName;
     private String lastName;
-    private Date birthdate;
     private String email;
     private String password;
     private Role role;
+    private static User Session;
 
-    public User(Long userId, String firstName, String lastName, Date birthdate,
+    public User(Long userId, String firstName, String lastName,
                 String email, String password, Role role) {
         this.userId = userId;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.birthdate = birthdate;
+
+        this.email = email;
+        this.password = password;
+        this.role = role;
+    }
+    public User( String firstName, String lastName,
+                 String email, String password, Role role) {
+
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.email = email;
         this.password = password;
         this.role = role;
@@ -46,13 +55,7 @@ public class User {
         this.lastName = lastName;
     }
 
-    public Date getBirthdate() {
-        return birthdate;
-    }
 
-    public void setBirthdate(Date birthdate) {
-        this.birthdate = birthdate;
-    }
 
     public String getEmail() {
         return email;
@@ -74,7 +77,7 @@ public class User {
         return role;
     }
 
-    public void setRole(Role roles) {
+    public void setRole(Role role) {
         this.role = role;
     }
 
@@ -88,5 +91,16 @@ public class User {
                 ", password='" + password + '\'' +
                 ", roles=" + role +
                 '}';
+    }
+
+    public static void setSession(User session){
+        User.Session = session;
+
+
+
+    }
+
+    public static User getSession() {
+        return Session;
     }
 }

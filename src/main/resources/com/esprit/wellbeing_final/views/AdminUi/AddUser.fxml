@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<AnchorPane prefHeight="400.0" prefWidth="700.0" BorderPane.alignment="CENTER"
+            xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.esprit.wellbeing_final.controllers.admin.AddUserController">
+    <children>
+        <GridPane>
+            <Label text="First Name" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <TextField fx:id="firstNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+            <Label text="Last Name" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <TextField fx:id="lastNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+            <Label text="Email" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            <TextField fx:id="emailTextField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+            <Label text="Password" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+            <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+            <Label text="Role" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+            <ChoiceBox fx:id="roleChoiceBox" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                <!-- Populate choice box with roles -->
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Admin"/>
+                        <String fx:value="User"/>
+                    </FXCollections>
+                </items>
+            </ChoiceBox>
+            <columnConstraints>
+                <ColumnConstraints/>
+                <ColumnConstraints/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+            </rowConstraints>
+        </GridPane>
+        <Button layoutX="62.0" layoutY="157.0" onAction="#handleAddUser" text="Add User"/>
+        <Button layoutX="21.0" layoutY="341.0" onAction="#handleBackButtonClick" text="Back"/>
+
+
+    </children>
+</AnchorPane>

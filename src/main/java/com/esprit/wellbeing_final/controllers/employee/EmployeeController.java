@@ -62,7 +62,7 @@ public class EmployeeController {
     }
 
     public void renderEducatif() {
-        loadView("/com/esprit/wellbeing_final/views/EmployeeUi/educatifUi.fxml");
+        loadView("/com/esprit/wellbeing_final/views/EmployeeUi/resources_rendrer.fxml");
         setButtonActive(edcbutton, HEdc);
     }
 

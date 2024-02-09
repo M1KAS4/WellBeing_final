@@ -12,7 +12,9 @@ module com.esprit.wellbeing_final {
     requires java.sql;
     requires mail;
     requires itextpdf;
+    requires fontawesomefx;
     requires java.desktop;
+    requires org.json;
     opens com.esprit.wellbeing_final to javafx.fxml;
     exports com.esprit.wellbeing_final;
 

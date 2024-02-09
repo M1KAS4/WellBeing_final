@@ -1,0 +1,6 @@
+User Report
+
+ID_User	First Name	Last Name	Email
+1	Foulen	Coach	coachfoulen@gmail.com
+2	Foulen	Foulen	aa@gmail.com
+3	admin	admin	admin@gmail.com

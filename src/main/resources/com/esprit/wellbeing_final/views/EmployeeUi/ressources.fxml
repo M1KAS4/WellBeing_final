@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="120.0" prefWidth="450.0" style="-fx-background-radius: 30;" stylesheets="@../../style/style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.wellbeing_final.controllers.employee.RessourceController">
+
+    <children>
+        <HBox layoutX="325.0" layoutY="14.0" AnchorPane.bottomAnchor="88.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+            <children>
+                <Label text="Views: ">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Label>
+                <Label fx:id="viewsLabel" text="0">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Label>
+            </children>
+        </HBox>
+        <Label fx:id="titleLabel" layoutX="14.0" layoutY="14.0" text="Resource Title" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+        <TextArea fx:id="descriptionArea" layoutX="17.0" layoutY="39.0" prefHeight="40.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="40.0" />
+        <Hyperlink fx:id="linkHyperlink" layoutX="17.0" layoutY="87.0" text="Resource Link" AnchorPane.leftAnchor="15.0" />
+    </children>
+   <styleClass>
+      <String fx:value="linear-gradient-pane" />
+      <String fx:value="linear-gradient-pane2" />
+   </styleClass>
+
+
+
+</AnchorPane>

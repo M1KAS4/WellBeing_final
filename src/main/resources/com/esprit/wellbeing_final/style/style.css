@@ -23,6 +23,14 @@
     -fx-background-color: #0a433a !important;
 }*/
 
+.button-all {
+    -fx-background-color: #ed6637;
+    -fx-background-radius: 15px;
+}
+.button-all:hover{
+    -fx-background-color: #eb5d2d;
+}
+
 .active-button {
     -fx-background-color: #0d594d;
 
@@ -32,6 +40,25 @@
     -fx-fill: white;
     -fx-font-size: 15px;
 }
+
+.linear-gradient-pane {
+    -fx-background-radius: 10;
+   -fx-background-color: #a4aadb; /* Base background color */
+    -fx-transition: background-color 0.3s; /* Smooth transition */
+}
+.linear-gradient-pane2 {
+    -fx-background-radius: 10;
+   -fx-background-color: #ff8c66; /* Base background color */
+    -fx-transition: background-color 0.3s; /* Smooth transition */
+}
+
+.linear-gradient-pane:hover {
+    -fx-background-color:  #ff794d;
+}
+
+
+
+
 
 .date-picker-popup > .button {
     visibility: hidden;
